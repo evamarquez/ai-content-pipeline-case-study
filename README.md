@@ -90,6 +90,26 @@ The system did not publish directly. It generated a draft, ran checks, and hande
 
 The progress screen was changed from a generic error state to a useful one: stage name, job identifier, last message, and a way to copy the details. A failed job that can be understood is cheaper to recover than a successful-looking job that silently produced incomplete work.
 
+## How the system matured
+
+The first architecture was a web app that accepted a keyword, country, and brand notes. It became a more complete production system as new reliability and quality problems appeared.
+
+### Brand context became specific to each step
+
+Instead of sending the same large block of brand notes to every stage, the pipeline learned to extract only the sections each step needed. Strategy received mission, audience, products, and compliance context. Writing received voice, tone, words to use or avoid, and writing examples. Less irrelevant context made the prompts easier to reason about and reduced prompt noise.
+
+### Research became reusable across systems
+
+The crawler and article generator shared competitor benchmarks through a database table with a seven-day expiry. The generator checked the shared benchmark first, then a recent job cache, and only then made a live research request. This prevented both systems from paying to collect the same competitor data repeatedly while preserving a live-data fallback.
+
+### Quality became a learning loop
+
+The QA system checked voice and tone, factual accuracy, SEO compliance, style and formatting, and HTML cleanup. Writer corrections, accepted fixes, and false positives were recorded as future training or suppression examples. The system learned from editorial judgment without pretending that the model could replace it.
+
+### Built does not always mean deployed
+
+Later iterations included separate source-verification and humanization functions. They were built and documented for integration, but were not presented as fully wired production stages until connected to the main chain. That distinction kept the handoff honest.
+
 ## Results
 
 - 549 articles were produced across 882 jobs.
@@ -118,7 +138,7 @@ These were documented for handoff instead of being hidden behind a polished demo
 - Added an SSRF guard.
 - Fixed authentication on the brand-scrape stage.
 - Added rate limiting to the audit endpoint.
-- Added source verification and a safer failure path for incomplete generation.
+- Built source verification and a safer failure path for incomplete generation.
 
 ## Handoff and post-launch operations
 
