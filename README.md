@@ -10,8 +10,7 @@ This is a sanitized case study. The source code and client-specific material are
 |---|---|
 | Role | AI Engineer and delivery owner for the automation layer |
 | Scope | 12 pipeline steps, 43 server functions, 12 screens |
-| Output | 549 articles across 882 jobs |
-| Median throughput | 4.7 minutes from keyword to Google Doc |
+| Output | 200+ articles produced in minutes, with editor review |
 | Reliability | Failure rate reduced from 25-40% to 4-8% |
 | Human control | Editorial review stayed in the loop |
 
@@ -112,10 +111,9 @@ Later iterations included separate source-verification and humanization function
 
 ## Results
 
-- 549 articles were produced across 882 jobs.
-- Median time from keyword to Google Doc was 4.7 minutes.
-- The measured failure rate moved from 25-40% in the early period to 4-8% after the asynchronous architecture, queueing, retries, and stage-specific fixes were in place.
 - Production went from roughly two days per article to minutes plus editor review.
+- The pipeline produced 200+ articles through a staged workflow with quality gates.
+- The measured failure rate moved from 25-40% in the early period to 4-8% after the asynchronous architecture, queueing, retries, and stage-specific fixes were in place.
 
 ## Failure analysis and lessons learned
 
