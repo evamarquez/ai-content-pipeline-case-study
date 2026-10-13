@@ -154,3 +154,15 @@ I owned the process analysis, the workflow design, the implementation of the aut
 ## Privacy boundary
 
 See [privacy.md](privacy.md) for the exact boundary around what is intentionally omitted.
+
+## Project documentation
+
+Read the delivery evidence as a case study:
+
+- [Project brief](docs/project-brief.md)
+- [Pipeline design](docs/pipeline-design.md)
+- [Quality controls](docs/quality-controls.md)
+- [Production evidence](docs/production-evidence.md)
+- [Close-out report](docs/close-out-report.md)
+
+The [documentation index](docs/README.md) explains how the artefacts fit together.
