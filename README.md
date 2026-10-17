@@ -43,6 +43,12 @@ The platform used **Netlify and Supabase**, alongside AI services and applicatio
 
 As **AI Engineer**, I owned process analysis, system design, implementation of the automation layer, reliability improvements, documentation, and operational handoff. Editors retained final content approval and publication decisions.
 
+## Key decisions and challenges
+
+- **Unreliable long-running jobs:** Split production into 12 trackable stages with retries and recovery paths. Measured failure rates fell from 25–40% to 4–8%.
+- **Different voices across brands:** Stored brand profiles separately and passed relevant instructions to each stage. The system was tested with 25 brand profiles and a batch of 250 topics.
+- **Speed without losing oversight:** Added quality checks and Google Docs handoff instead of automatic publishing. Median processing took 4.7 minutes per document, plus editor review.
+
 ## Project documentation
 
 For more detail, see:
