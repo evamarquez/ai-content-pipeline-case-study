@@ -1,6 +1,6 @@
 # AI content pipeline
 
-An internal content production system that turned a keyword and a brand profile into a reviewable Google Doc.
+A multi-brand AI content production platform built to reduce content-delivery time and operating costs while preserving brand-specific voice and human editorial review.
 
 This is a sanitized case study. The source code and client-specific material are not published.
 
@@ -10,7 +10,7 @@ This is a sanitized case study. The source code and client-specific material are
 |---|---|
 | Role | AI Engineer and delivery owner for the automation layer |
 | Scope | 12 pipeline steps, 43 server functions, 12 screens |
-| Output | 200+ articles produced in minutes, with editor review |
+| Verified capacity | 25 brand profiles and a tested batch of 250 topics (25 brands × 10 topics) |\n| Design target | At least 50 brand profiles; this limit was not load-tested |\n| Output | 549 articles produced across 882 jobs; median keyword-to-document time of 4.7 minutes plus editor review |\n| Business impact | CEO reported a 50% reduction in content team size and nearly six figures in estimated annualized profit improvement |
 | Reliability | Failure rate reduced from 25-40% to 4-8% |
 | Human control | Editorial review stayed in the loop |
 
@@ -111,8 +111,7 @@ Later iterations included separate source-verification and humanization function
 
 ## Results
 
-- Production went from roughly two days per article to minutes plus editor review.
-- The pipeline produced 200+ articles through a staged workflow with quality gates.
+- The employer's CEO credited the platform with enabling a 50% reduction in content team size and contributing to nearly six figures in annualized profit improvement. This is a management estimate, not an audited or realized profit figure.\n- Production went from roughly two days per article to minutes plus editor review (median keyword-to-document time: 4.7 minutes).\n- The pipeline produced 549 articles across 882 jobs, through a staged process with quality gates.\n- In testing, the tool handled 25 separate brand profiles and a batch of 250 topics. It was designed to support at least 50 profiles, but that target was not load-tested.\n- Brand-specific configurations preserved tone and voice across stages, and selected infrastructure ran on Netlify and Supabase.
 - The measured failure rate moved from 25-40% in the early period to 4-8% after the asynchronous architecture, queueing, retries, and stage-specific fixes were in place.
 
 ## Failure analysis and lessons learned
@@ -153,8 +152,7 @@ I owned the process analysis, the workflow design, the implementation of the aut
 
 See [privacy.md](privacy.md) for the exact boundary around what is intentionally omitted.
 
-## Project documentation
-
+## Portfolio case study\n\n[View the visual project case and its documents](https://www.by-evamarquez.com/portfolio/ai-content-pipeline). This repository contains public documentation only, not application source code, actual prompts, customer data, or credentials.\n\n## Project documentation\n
 Read the delivery evidence as a case study:
 
 - [Project brief](docs/project-brief.md)
